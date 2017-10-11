@@ -10,6 +10,12 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
+
+            Song shake = new Song("Shake", "The Martians", 5, 1000, 200);
+            
+            shake.HitSong();
+            Console.WriteLine(shake.ChartRise);
+
         }
     }
 }
