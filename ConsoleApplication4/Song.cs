@@ -8,13 +8,14 @@ namespace ConsoleApplication4
 {
     class Song
     {
-        private string title;
-        private string bandName;
-        private string tempo;
-        private int numberOfBandMembers;
-        private int radioPlay;
-        private int chartRise;
-        private int productionCost;
+        protected string title;
+        protected string bandName;
+        protected string tempo;
+        protected int numberOfBandMembers;
+        protected int radioPlay;
+        protected int chartRise;
+        protected int productionCost;
+        protected int moneyMade;
 
         public string Title { get;}
         public string Tempo { get; set; }
@@ -31,6 +32,11 @@ namespace ConsoleApplication4
 
         }
 
+        public Song(string tempo)
+        {
+            this.tempo = tempo;
+        }
+
         public Song(string title, string bandName, int numberOfBandMembers, int productionCost, int radioPlay)
         {
             this.title = title;
@@ -41,7 +47,7 @@ namespace ConsoleApplication4
             this.chartRise = 0;
         }
 
-        public void HitSong()
+        public virtual void HitSong()
         {
             chartRise = productionCost - radioPlay;
         }
